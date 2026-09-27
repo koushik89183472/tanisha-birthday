@@ -1,0 +1,433 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    color: white;
+    background:
+        radial-gradient(circle at 50% 20%, #3b092d, transparent 35%),
+        linear-gradient(135deg, #05000b, #170016, #08000d);
+    overflow-x: hidden;
+}
+
+
+/* STARS */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+
+    background-size: 90px 90px, 150px 150px;
+
+    background-position:
+        20px 30px,
+        60px 80px;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* WELCOME SCREEN */
+
+.welcome {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.welcome-box {
+    animation: appear 1.5s ease;
+}
+
+
+.small-text {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #ff91bd;
+
+    margin-bottom: 25px;
+}
+
+
+.welcome h1 {
+    font-size: clamp(60px, 10vw, 110px);
+
+    line-height: 0.95;
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        0 0 30px rgba(255, 70, 150, 0.4);
+}
+
+
+.welcome h1 span {
+    color: #ff91bd;
+}
+
+
+.welcome p {
+    font-size: 20px;
+
+    color: #ddd;
+
+    margin-bottom: 35px;
+}
+
+
+/* BUTTON */
+
+button {
+    border: none;
+
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(90deg, #ff3d91, #ff79b7);
+
+    box-shadow:
+        0 10px 35px rgba(255, 50, 140, 0.3);
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 15px 45px rgba(255, 50, 140, 0.5);
+}
+
+
+/* BIRTHDAY */
+
+.birthday {
+    min-height: 100vh;
+
+    padding: 90px 20px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.content {
+    width: min(850px, 100%);
+
+    margin: auto;
+
+    text-align: center;
+
+    animation: appear 1.3s ease;
+}
+
+
+/* DATE */
+
+.date {
+    color: #ff9ac4;
+
+    letter-spacing: 7px;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+/* TITLE */
+
+.content h2 {
+    font-size: clamp(45px, 8vw, 82px);
+
+    line-height: 1;
+
+    margin-bottom: 30px;
+}
+
+
+.content h2 span {
+    display: block;
+
+    color: #ff8fbd;
+}
+
+
+.intro {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #ddd;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+}
+
+
+/* CAKE */
+
+.cake {
+    font-size: 95px;
+
+    margin: 45px 0;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+
+/* LETTER */
+
+.letter {
+    text-align: left;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.35);
+
+    margin-bottom: 35px;
+}
+
+
+.letter h3 {
+    text-align: center;
+
+    color: #ff9bc5;
+
+    font-size: 27px;
+
+    margin-bottom: 25px;
+}
+
+
+.letter p {
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #f2e8ed;
+
+    margin-bottom: 18px;
+}
+
+
+.signature {
+    text-align: right;
+
+    color: #ff9bc5;
+
+    font-size: 18px;
+
+    margin-top: 25px;
+}
+
+
+/* WISH */
+
+.wish {
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 80, 160, 0.12);
+
+    border: 1px solid rgba(255, 150, 200, 0.2);
+
+    animation: appear 1s ease;
+}
+
+
+.wish h3 {
+    color: #ff9bc5;
+
+    margin-bottom: 15px;
+}
+
+
+.wish p {
+    color: #ddd;
+
+    font-size: 17px;
+}
+
+
+/* FINAL */
+
+.final {
+    margin-top: 90px;
+
+    padding-bottom: 50px;
+}
+
+
+.final p {
+    color: #aaa;
+
+    margin-bottom: 15px;
+}
+
+
+.final h3 {
+    color: #ff8fbd;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+
+/* FLOATING HEARTS */
+
+.heart {
+    position: fixed;
+
+    bottom: -40px;
+
+    z-index: 100;
+
+    pointer-events: none;
+
+    animation: rise linear forwards;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+@keyframes rise {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    to {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .welcome h1 {
+        font-size: 60px;
+    }
+
+    .letter {
+        padding: 25px;
+    }
+
+    .letter p {
+        font-size: 16px;
+    }
+
+    .cake {
+        font-size: 75px;
+    }
+
+    .final h3 {
+        font-size: 30px;
+    }
+
+}
